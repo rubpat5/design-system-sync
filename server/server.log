@@ -1,0 +1,323 @@
+[2025-03-30T14:25:53.525Z] Server listening on port 3031
+[2025-03-30T14:27:21.440Z] New connection from ::1
+[2025-03-30T14:27:21.443Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-03-30T14:27:21.444Z] Figma client connected
+[2025-03-30T14:27:27.234Z] Received message: {"type":"figma-to-react","components":[{"id":"2:13","name":"Group 1","type":"GROUP","x":-263,"y":-263,"width":398,"height":270,"visible":true,"rotation":0,"children":[{"id":"1:2","name":"Rectangle 1",...
+[2025-03-30T14:27:27.236Z] Cannot forward to React: No React client connected
+[2025-03-30T14:27:35.012Z] New connection from ::1
+[2025-03-30T14:27:35.015Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-03-30T14:27:35.016Z] React client connected
+[2025-03-30T14:27:40.378Z] React client disconnected
+[2025-03-30T14:27:40.378Z] Client disconnected from ::1
+[2025-03-30T14:27:42.073Z] New connection from ::1
+[2025-03-30T14:27:42.075Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-03-30T14:27:42.076Z] React client connected
+[2025-03-30T14:27:45.007Z] New connection from ::1
+[2025-03-30T14:27:45.008Z] Figma client disconnected
+[2025-03-30T14:27:45.008Z] Client disconnected from ::1
+[2025-03-30T14:27:52.056Z] New connection from ::1
+[2025-03-30T14:27:52.057Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-03-30T14:27:52.057Z] Figma client connected
+[2025-03-30T14:27:53.820Z] Received message: {"type":"test-message","message":"Hello from Figma plugin!","timestamp":"2025-03-30T14:27:53.820Z"}...
+[2025-03-30T14:27:53.821Z] Test message received: Hello from Figma plugin!
+[2025-03-30T14:28:03.155Z] Received message: {"type":"figma-to-react","components":[{"id":"2:13","name":"Group 1","type":"GROUP","x":-263,"y":-263,"width":398,"height":270,"visible":true,"rotation":0,"children":[{"id":"1:2","name":"Rectangle 1",...
+[2025-03-30T14:28:03.156Z] Forwarding component data from Figma to React
+[2025-03-30T14:28:26.398Z] Received message: {"type":"figma-to-react","components":[{"id":"2:13","name":"Group 1","type":"GROUP","x":-263,"y":-263,"width":398,"height":270,"visible":true,"rotation":0,"children":[{"id":"1:2","name":"Rectangle 1",...
+[2025-03-30T14:28:26.399Z] Forwarding component data from Figma to React
+[2025-03-30T14:28:31.593Z] Received message: {"type":"figma-to-react","components":[{"id":"2:13","name":"Group 1","type":"GROUP","x":-263,"y":-263,"width":398,"height":270,"visible":true,"rotation":0,"children":[{"id":"1:2","name":"Rectangle 1",...
+[2025-03-30T14:28:31.593Z] Forwarding component data from Figma to React
+[2025-03-30T14:28:34.736Z] React client disconnected
+[2025-03-30T14:28:34.737Z] Client disconnected from ::1
+[2025-03-30T14:28:36.861Z] New connection from ::1
+[2025-03-30T14:28:36.864Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-03-30T14:28:36.864Z] React client connected
+[2025-03-30T14:28:38.835Z] React client disconnected
+[2025-03-30T14:28:38.835Z] Client disconnected from ::1
+[2025-03-30T14:28:39.845Z] New connection from ::1
+[2025-03-30T14:28:39.849Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-03-30T14:28:39.849Z] React client connected
+[2025-03-30T14:28:41.833Z] Received message: {"type":"figma-to-react","components":[{"id":"2:13","name":"Group 1","type":"GROUP","x":-263,"y":-263,"width":398,"height":270,"visible":true,"rotation":0,"children":[{"id":"1:2","name":"Rectangle 1",...
+[2025-03-30T14:28:41.834Z] Forwarding component data from Figma to React
+[2025-03-30T14:49:02.636Z] Client disconnected from ::1
+[2025-03-30T14:49:02.645Z] React client disconnected
+[2025-03-30T14:49:02.646Z] Client disconnected from ::1
+[2025-03-30T14:49:02.647Z] Figma client disconnected
+[2025-03-30T14:49:02.647Z] Client disconnected from ::1
+[2025-03-30T15:58:11.984Z] New connection from ::1
+[2025-03-30T15:58:11.989Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-03-30T15:58:11.990Z] React client connected
+[2025-03-30T15:58:14.783Z] Received message: {"type":"test-message","message":"Hello from React app!","timestamp":"2025-03-30T15:58:14.783Z"}...
+[2025-03-30T15:58:14.785Z] Test message received: Hello from React app!
+[2025-03-30T15:59:14.041Z] React client disconnected
+[2025-03-30T15:59:14.042Z] Client disconnected from ::1
+[2025-03-30T16:00:20.295Z] New connection from ::1
+[2025-03-30T16:00:20.298Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-03-30T16:00:20.298Z] React client connected
+[2025-03-30T16:00:32.290Z] New connection from ::1
+[2025-03-30T16:00:32.571Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-03-30T16:00:32.572Z] Figma client connected
+[2025-03-30T16:00:44.280Z] Received message: {"type":"figma-to-react","components":[{"id":"2:13","name":"test group","type":"GROUP","x":-263,"y":-263,"width":398,"height":270,"visible":true,"rotation":0,"children":[{"id":"1:2","name":"Rectangle ...
+[2025-03-30T16:00:44.280Z] Forwarding component data from Figma to React
+[2025-03-30T16:01:10.135Z] Received message: {"type":"figma-to-react","components":[{"id":"2:5","name":"example text","type":"TEXT","x":-196.19598388671875,"y":-209.22222900390625,"width":53.007537841796875,"height":18.33333396911621,"visible":t...
+[2025-03-30T16:01:10.135Z] Forwarding component data from Figma to React
+[2025-03-30T16:01:27.252Z] Received message: {"type":"figma-to-react","components":[{"id":"2:13","name":"test group","type":"GROUP","x":-263,"y":-263,"width":289,"height":165,"visible":true,"rotation":0,"children":[{"id":"1:2","name":"Rectangle ...
+[2025-03-30T16:01:27.252Z] Forwarding component data from Figma to React
+[2025-03-30T16:05:42.590Z] React client disconnected
+[2025-03-30T16:05:42.591Z] Client disconnected from ::1
+[2025-03-30T16:05:46.999Z] Received message: {"type":"figma-to-react","components":[{"id":"2:13","name":"test group","type":"GROUP","x":-263,"y":-263,"width":289,"height":165,"visible":true,"rotation":0,"children":[{"id":"1:2","name":"Rectangle ...
+[2025-03-30T16:05:47.001Z] Cannot forward to React: No React client connected
+[2025-03-30T16:31:52.027Z] New connection from ::1
+[2025-03-30T16:31:52.033Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-03-30T16:31:52.033Z] React client connected
+[2025-03-30T16:31:58.191Z] Received message: {"type":"figma-to-react","components":[{"id":"2:13","name":"test group","type":"GROUP","x":-263,"y":-263,"width":289,"height":165,"visible":true,"rotation":0,"children":[{"id":"1:2","name":"Rectangle ...
+[2025-03-30T16:31:58.195Z] Forwarding component data from Figma to React
+[2025-03-30T16:32:12.914Z] Received message: {"type":"figma-to-react","components":[{"id":"2:5","name":"example text","type":"TEXT","x":-196.19598388671875,"y":-209.22222900390625,"width":53.007537841796875,"height":18.33333396911621,"visible":t...
+[2025-03-30T16:32:12.914Z] Forwarding component data from Figma to React
+[2025-03-30T16:32:18.532Z] Received message: {"type":"figma-to-react","components":[{"id":"1:2","name":"Rectangle 1","type":"RECTANGLE","x":-263,"y":-263,"width":289,"height":165,"visible":true,"rotation":0,"children":[],"fills":[{"type":"SOLID"...
+[2025-03-30T16:32:18.532Z] Forwarding component data from Figma to React
+[2025-03-30T16:34:51.062Z] Figma client disconnected
+[2025-03-30T16:34:51.077Z] Client disconnected from ::1
+[2025-03-30T16:34:51.110Z] React client disconnected
+[2025-03-30T16:34:51.111Z] Client disconnected from ::1
+[2025-04-02T11:46:35.939Z] Server listening on port 3031
+[2025-04-02T11:48:05.223Z] New connection from ::1
+[2025-04-02T11:48:05.228Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T11:48:05.228Z] React client connected
+[2025-04-02T11:48:46.984Z] New connection from ::1
+[2025-04-02T11:48:46.987Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-04-02T11:48:46.987Z] Figma client connected
+[2025-04-02T11:48:50.220Z] Received message: {"type":"figma-to-react","components":[{"id":"18:67","name":"Property 1=main","type":"COMPONENT","x":10,"y":10,"width":60,"height":33,"visible":true,"rotation":0,"children":[{"id":"18:68","name":"Butt...
+[2025-04-02T11:48:50.220Z] Forwarding component data from Figma to React
+[2025-04-02T11:49:04.477Z] Received message: {"type":"figma-to-react","components":[{"id":"18:67","name":"Property 1=main","type":"COMPONENT","x":10,"y":10,"width":60,"height":33,"visible":true,"rotation":0,"children":[{"id":"18:68","name":"Butt...
+[2025-04-02T11:49:04.477Z] Forwarding component data from Figma to React
+[2025-04-02T11:49:08.161Z] Received message: {"type":"figma-to-react","components":[{"id":"18:69","name":"Property 1=hover","type":"COMPONENT","x":10,"y":53,"width":60,"height":33,"visible":true,"rotation":0,"children":[{"id":"18:70","name":"But...
+[2025-04-02T11:49:08.162Z] Forwarding component data from Figma to React
+[2025-04-02T11:49:21.940Z] Received message: {"type":"figma-to-react","components":[{"id":"18:347","name":"Button outlined","type":"COMPONENT","x":-125,"y":36,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"18:348","name":...
+[2025-04-02T11:49:21.940Z] Forwarding component data from Figma to React
+[2025-04-02T11:56:10.508Z] React client disconnected
+[2025-04-02T11:56:10.511Z] Client disconnected from ::1
+[2025-04-02T11:56:16.124Z] New connection from ::1
+[2025-04-02T11:56:16.128Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T11:56:16.129Z] React client connected
+[2025-04-02T11:56:21.214Z] Received message: {"type":"figma-to-react","components":[{"id":"18:347","name":"Button outlined","type":"COMPONENT","x":-125,"y":36,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"18:348","name":...
+[2025-04-02T11:56:21.215Z] Forwarding component data from Figma to React
+[2025-04-02T11:57:52.666Z] React client disconnected
+[2025-04-02T11:57:52.668Z] Client disconnected from ::1
+[2025-04-02T11:59:05.633Z] Figma client disconnected
+[2025-04-02T11:59:05.633Z] Client disconnected from ::1
+[2025-04-02T11:59:05.634Z] New connection from ::1
+[2025-04-02T11:59:08.652Z] New connection from ::1
+[2025-04-02T11:59:08.655Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T11:59:08.655Z] React client connected
+[2025-04-02T11:59:12.951Z] New connection from ::1
+[2025-04-02T11:59:12.952Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-04-02T11:59:12.953Z] Figma client connected
+[2025-04-02T11:59:18.760Z] React client disconnected
+[2025-04-02T11:59:18.761Z] Client disconnected from ::1
+[2025-04-02T11:59:20.848Z] New connection from ::1
+[2025-04-02T11:59:20.850Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T11:59:20.851Z] React client connected
+[2025-04-02T11:59:22.878Z] Figma client disconnected
+[2025-04-02T11:59:22.878Z] Client disconnected from ::1
+[2025-04-02T11:59:22.879Z] New connection from ::1
+[2025-04-02T11:59:26.246Z] New connection from ::1
+[2025-04-02T11:59:26.267Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-04-02T11:59:26.270Z] Figma client connected
+[2025-04-02T11:59:37.590Z] Received message: {"type":"figma-to-react","components":[{"id":"18:347","name":"Button outlined","type":"COMPONENT","x":-125,"y":36,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"18:348","name":...
+[2025-04-02T11:59:37.592Z] Forwarding component data from Figma to React
+[2025-04-02T11:59:43.538Z] Client disconnected from ::1
+[2025-04-02T11:59:43.538Z] Figma client disconnected
+[2025-04-02T11:59:43.539Z] Client disconnected from ::1
+[2025-04-02T11:59:43.539Z] Client disconnected from ::1
+[2025-04-02T12:00:51.627Z] New connection from ::1
+[2025-04-02T12:00:51.632Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-04-02T12:00:51.632Z] Figma client connected
+[2025-04-02T12:00:53.585Z] Received message: {"type":"figma-to-react","components":[{"id":"18:131","name":"Button primary","type":"COMPONENT","x":0,"y":36,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"18:125","name":"_ba...
+[2025-04-02T12:00:53.585Z] Forwarding component data from Figma to React
+[2025-04-02T12:04:19.376Z] React client disconnected
+[2025-04-02T12:04:19.377Z] Client disconnected from ::1
+[2025-04-02T12:05:35.073Z] Figma client disconnected
+[2025-04-02T12:05:35.074Z] Client disconnected from ::1
+[2025-04-02T12:05:35.075Z] New connection from ::1
+[2025-04-02T12:05:36.294Z] New connection from ::1
+[2025-04-02T12:05:36.306Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-04-02T12:05:36.306Z] Figma client connected
+[2025-04-02T12:05:39.162Z] New connection from ::1
+[2025-04-02T12:05:39.166Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:05:39.166Z] React client connected
+[2025-04-02T12:05:45.679Z] Received message: {"type":"figma-to-react","components":[{"id":"18:131","name":"Button primary","type":"COMPONENT","x":0,"y":36,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"18:125","name":"_ba...
+[2025-04-02T12:05:45.680Z] Forwarding component data from Figma to React
+[2025-04-02T12:06:30.600Z] Received message: {"type":"figma-to-react","components":[{"id":"18:347","name":"Button outlined","type":"COMPONENT","x":-125,"y":36,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"18:348","name":...
+[2025-04-02T12:06:30.601Z] Forwarding component data from Figma to React
+[2025-04-02T12:06:32.999Z] Received message: {"type":"figma-to-react","components":[{"id":"18:131","name":"Button primary","type":"COMPONENT","x":0,"y":36,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"18:125","name":"_ba...
+[2025-04-02T12:06:32.999Z] Forwarding component data from Figma to React
+[2025-04-02T12:08:09.884Z] Client disconnected from ::1
+[2025-04-02T12:08:09.885Z] Figma client disconnected
+[2025-04-02T12:08:09.886Z] Client disconnected from ::1
+[2025-04-02T12:08:23.659Z] React client disconnected
+[2025-04-02T12:08:23.660Z] Client disconnected from ::1
+[2025-04-02T12:08:58.784Z] New connection from ::1
+[2025-04-02T12:08:58.787Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:08:58.788Z] React client connected
+[2025-04-02T12:09:07.123Z] New connection from ::1
+[2025-04-02T12:09:07.124Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-04-02T12:09:07.125Z] Figma client connected
+[2025-04-02T12:09:07.842Z] Received message: {"type":"figma-to-react","components":[{"id":"18:131","name":"Button primary","type":"COMPONENT","x":0,"y":36,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"18:125","name":"_ba...
+[2025-04-02T12:09:07.849Z] Forwarding component data from Figma to React
+[2025-04-02T12:09:57.497Z] Received message: {"type":"figma-to-react","components":[{"id":"18:347","name":"Button outlined","type":"COMPONENT","x":-125,"y":36,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"18:348","name":...
+[2025-04-02T12:09:57.504Z] Forwarding component data from Figma to React
+[2025-04-02T12:10:07.988Z] Figma client disconnected
+[2025-04-02T12:10:07.989Z] Client disconnected from ::1
+[2025-04-02T12:11:46.381Z] New connection from ::1
+[2025-04-02T12:11:46.382Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-04-02T12:11:46.382Z] Figma client connected
+[2025-04-02T12:11:48.351Z] Received message: {"type":"figma-to-react","components":[{"id":"22:164","name":"Button primary","type":"INSTANCE","x":-125,"y":156,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:164;18:117",...
+[2025-04-02T12:11:48.351Z] Forwarding component data from Figma to React
+[2025-04-02T12:13:18.101Z] Received message: {"type":"figma-to-react","components":[{"id":"22:173","name":"Button outlined","type":"INSTANCE","x":-130,"y":209,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:173;18:117"...
+[2025-04-02T12:13:18.102Z] Forwarding component data from Figma to React
+[2025-04-02T12:14:04.563Z] Figma client disconnected
+[2025-04-02T12:14:04.563Z] Client disconnected from ::1
+[2025-04-02T12:20:03.991Z] New connection from ::1
+[2025-04-02T12:20:03.994Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-04-02T12:20:03.995Z] Figma client connected
+[2025-04-02T12:20:04.614Z] Received message: {"type":"figma-to-react","components":[{"id":"22:197","name":"Button primary","type":"INSTANCE","x":-220,"y":356,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:197;18:117",...
+[2025-04-02T12:20:04.614Z] Forwarding component data from Figma to React
+[2025-04-02T12:21:29.633Z] React client disconnected
+[2025-04-02T12:21:29.634Z] Client disconnected from ::1
+[2025-04-02T12:21:42.407Z] Received message: {"type":"figma-to-react","components":[{"id":"22:197","name":"Button primary","type":"INSTANCE","x":-220,"y":356,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:197;18:117",...
+[2025-04-02T12:21:42.407Z] Cannot forward to React: No React client connected
+[2025-04-02T12:21:43.272Z] Received message: {"type":"figma-to-react","components":[{"id":"22:197","name":"Button primary","type":"INSTANCE","x":-220,"y":356,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:197;18:117",...
+[2025-04-02T12:21:43.279Z] Cannot forward to React: No React client connected
+[2025-04-02T12:21:45.259Z] Received message: {"type":"figma-to-react","components":[{"id":"22:173","name":"Button outlined","type":"INSTANCE","x":-220,"y":408,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:173;18:117"...
+[2025-04-02T12:21:45.259Z] Cannot forward to React: No React client connected
+[2025-04-02T12:21:50.326Z] New connection from ::1
+[2025-04-02T12:21:50.339Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:21:50.339Z] React client connected
+[2025-04-02T12:21:54.684Z] Received message: {"type":"figma-to-react","components":[{"id":"22:173","name":"Button outlined","type":"INSTANCE","x":-220,"y":408,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:173;18:117"...
+[2025-04-02T12:21:54.684Z] Forwarding component data from Figma to React
+[2025-04-02T12:23:22.384Z] Received message: {"type":"figma-to-react","components":[{"id":"22:173","name":"Button outlined","type":"INSTANCE","x":-220,"y":408,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:173;18:117"...
+[2025-04-02T12:23:22.385Z] Forwarding component data from Figma to React
+[2025-04-02T12:23:29.162Z] React client disconnected
+[2025-04-02T12:23:29.163Z] Client disconnected from ::1
+[2025-04-02T12:23:35.255Z] Received message: {"type":"figma-to-react","components":[{"id":"22:173","name":"Button outlined","type":"INSTANCE","x":-220,"y":408,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:173;18:117"...
+[2025-04-02T12:23:35.255Z] Cannot forward to React: No React client connected
+[2025-04-02T12:23:37.306Z] New connection from ::1
+[2025-04-02T12:23:37.311Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:23:37.311Z] React client connected
+[2025-04-02T12:23:38.673Z] Received message: {"type":"figma-to-react","components":[{"id":"22:173","name":"Button outlined","type":"INSTANCE","x":-220,"y":408,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:173;18:117"...
+[2025-04-02T12:23:38.673Z] Forwarding component data from Figma to React
+[2025-04-02T12:25:39.703Z] Received message: {"type":"figma-to-react","components":[{"id":"22:197","name":"Button primary","type":"INSTANCE","x":-220,"y":356,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:197;18:117",...
+[2025-04-02T12:25:39.703Z] Forwarding component data from Figma to React
+[2025-04-02T12:28:40.354Z] React client disconnected
+[2025-04-02T12:28:40.355Z] Client disconnected from ::1
+[2025-04-02T12:28:42.553Z] New connection from ::1
+[2025-04-02T12:28:42.567Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:28:42.568Z] React client connected
+[2025-04-02T12:28:46.010Z] Received message: {"type":"figma-to-react","components":[{"id":"22:197","name":"Button primary","type":"INSTANCE","x":-220,"y":356,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:197;18:117",...
+[2025-04-02T12:28:46.010Z] Forwarding component data from Figma to React
+[2025-04-02T12:39:02.848Z] React client disconnected
+[2025-04-02T12:39:02.850Z] Client disconnected from ::1
+[2025-04-02T12:39:54.165Z] New connection from ::1
+[2025-04-02T12:39:54.169Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:39:54.169Z] React client connected
+[2025-04-02T12:39:58.132Z] Received message: {"type":"figma-to-react","components":[{"id":"22:197","name":"Button primary","type":"INSTANCE","x":-220,"y":356,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:197;18:117",...
+[2025-04-02T12:39:58.133Z] Forwarding component data from Figma to React
+[2025-04-02T12:40:01.684Z] Received message: {"type":"figma-to-react","components":[{"id":"22:190","name":"Button disabled","type":"INSTANCE","x":-220,"y":461,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:190;18:117"...
+[2025-04-02T12:40:01.685Z] Forwarding component data from Figma to React
+[2025-04-02T12:41:59.844Z] React client disconnected
+[2025-04-02T12:41:59.845Z] Client disconnected from ::1
+[2025-04-02T12:42:10.349Z] Received message: {"type":"figma-to-react","components":[{"id":"22:190","name":"Button disabled","type":"INSTANCE","x":-220,"y":461,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:190;18:117"...
+[2025-04-02T12:42:10.350Z] Cannot forward to React: No React client connected
+[2025-04-02T12:42:12.416Z] New connection from ::1
+[2025-04-02T12:42:12.419Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:42:12.420Z] React client connected
+[2025-04-02T12:42:14.875Z] Received message: {"type":"figma-to-react","components":[{"id":"22:190","name":"Button disabled","type":"INSTANCE","x":-220,"y":461,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:190;18:117"...
+[2025-04-02T12:42:14.876Z] Forwarding component data from Figma to React
+[2025-04-02T12:42:18.709Z] Received message: {"type":"figma-to-react","components":[{"id":"22:173","name":"Button outlined","type":"INSTANCE","x":-220,"y":408,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:173;18:117"...
+[2025-04-02T12:42:18.710Z] Forwarding component data from Figma to React
+[2025-04-02T12:42:29.580Z] React client disconnected
+[2025-04-02T12:42:29.582Z] Client disconnected from ::1
+[2025-04-02T12:45:26.372Z] New connection from ::1
+[2025-04-02T12:45:26.375Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:45:26.376Z] React client connected
+[2025-04-02T12:45:31.081Z] Received message: {"type":"figma-to-react","components":[{"id":"22:173","name":"Button outlined","type":"INSTANCE","x":-220,"y":408,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:173;18:117"...
+[2025-04-02T12:45:31.081Z] Forwarding component data from Figma to React
+[2025-04-02T12:45:33.397Z] Received message: {"type":"figma-to-react","components":[{"id":"22:197","name":"Button primary","type":"INSTANCE","x":-220,"y":356,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:197;18:117",...
+[2025-04-02T12:45:33.397Z] Forwarding component data from Figma to React
+[2025-04-02T12:45:36.112Z] Received message: {"type":"figma-to-react","components":[{"id":"22:164","name":"Button primary","type":"INSTANCE","x":-220,"y":303,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:164;18:117",...
+[2025-04-02T12:45:36.112Z] Forwarding component data from Figma to React
+[2025-04-02T12:45:56.430Z] React client disconnected
+[2025-04-02T12:45:56.431Z] Client disconnected from ::1
+[2025-04-02T12:46:14.355Z] New connection from ::1
+[2025-04-02T12:46:14.359Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:46:14.360Z] React client connected
+[2025-04-02T12:46:15.998Z] Received message: {"type":"figma-to-react","components":[{"id":"22:164","name":"Button primary","type":"INSTANCE","x":-220,"y":303,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:164;18:117",...
+[2025-04-02T12:46:15.999Z] Forwarding component data from Figma to React
+[2025-04-02T12:46:19.436Z] React client disconnected
+[2025-04-02T12:46:19.437Z] Client disconnected from ::1
+[2025-04-02T12:46:21.287Z] New connection from ::1
+[2025-04-02T12:46:21.291Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:46:21.291Z] React client connected
+[2025-04-02T12:46:27.141Z] Received message: {"type":"figma-to-react","components":[{"id":"22:164","name":"Button primary","type":"INSTANCE","x":-220,"y":303,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:164;18:117",...
+[2025-04-02T12:46:27.142Z] Forwarding component data from Figma to React
+[2025-04-02T12:47:01.962Z] Figma client disconnected
+[2025-04-02T12:47:01.963Z] Client disconnected from ::1
+[2025-04-02T12:47:32.507Z] New connection from ::1
+[2025-04-02T12:47:32.509Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-04-02T12:47:32.509Z] Figma client connected
+[2025-04-02T12:47:33.591Z] Received message: {"type":"figma-to-react","components":[{"id":"22:164","name":"Button primary","type":"INSTANCE","x":-220,"y":303,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:164;18:117",...
+[2025-04-02T12:47:33.592Z] Forwarding component data from Figma to React
+[2025-04-02T12:47:43.359Z] React client disconnected
+[2025-04-02T12:47:43.360Z] Client disconnected from ::1
+[2025-04-02T12:47:47.549Z] New connection from ::1
+[2025-04-02T12:47:47.552Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:47:47.552Z] React client connected
+[2025-04-02T12:55:17.602Z] React client disconnected
+[2025-04-02T12:55:17.603Z] Client disconnected from ::1
+[2025-04-02T12:55:19.292Z] New connection from ::1
+[2025-04-02T12:55:19.310Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:55:19.310Z] React client connected
+[2025-04-02T12:55:21.346Z] React client disconnected
+[2025-04-02T12:55:21.347Z] Client disconnected from ::1
+[2025-04-02T12:55:24.936Z] New connection from ::1
+[2025-04-02T12:55:24.940Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T12:55:24.941Z] React client connected
+[2025-04-02T12:55:25.392Z] Received message: {"type":"test-message","message":"Hello from React app!","timestamp":"2025-04-02T12:55:25.389Z"}...
+[2025-04-02T12:55:25.396Z] Test message received: Hello from React app!
+[2025-04-02T13:03:20.850Z] Figma client disconnected
+[2025-04-02T13:03:20.851Z] Client disconnected from ::1
+[2025-04-02T13:05:30.650Z] React client disconnected
+[2025-04-02T13:05:30.650Z] Client disconnected from ::1
+[2025-04-02T13:15:00.191Z] New connection from ::1
+[2025-04-02T13:15:00.193Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T13:15:00.194Z] React client connected
+[2025-04-02T13:15:05.768Z] New connection from ::1
+[2025-04-02T13:15:06.274Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-04-02T13:15:06.275Z] Figma client connected
+[2025-04-02T13:15:07.304Z] Received message: {"type":"figma-to-react","components":[{"id":"22:164","name":"Button primary","type":"INSTANCE","x":-220,"y":303,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:164;18:117",...
+[2025-04-02T13:15:07.304Z] Forwarding component data from Figma to React
+[2025-04-02T13:17:46.294Z] React client disconnected
+[2025-04-02T13:17:46.295Z] Client disconnected from ::1
+[2025-04-02T13:17:53.524Z] Figma client disconnected
+[2025-04-02T13:17:53.524Z] Client disconnected from ::1
+[2025-04-02T13:21:05.522Z] New connection from ::1
+[2025-04-02T13:21:05.525Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T13:21:05.525Z] React client connected
+[2025-04-02T13:21:13.937Z] New connection from ::1
+[2025-04-02T13:21:13.939Z] Received message: {"type":"client-connect","clientType":"figma"}...
+[2025-04-02T13:21:13.939Z] Figma client connected
+[2025-04-02T13:21:14.831Z] Received message: {"type":"figma-to-react","components":[{"id":"22:164","name":"Button primary","type":"INSTANCE","x":-220,"y":303,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:164;18:117",...
+[2025-04-02T13:21:14.832Z] Forwarding component data from Figma to React
+[2025-04-02T13:21:20.768Z] Received message: {"type":"figma-to-react","components":[{"id":"22:173","name":"Button outlined","type":"INSTANCE","x":-220,"y":408,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:173;18:117"...
+[2025-04-02T13:21:20.768Z] Forwarding component data from Figma to React
+[2025-04-02T13:21:34.052Z] React client disconnected
+[2025-04-02T13:21:34.053Z] Client disconnected from ::1
+[2025-04-02T13:24:29.522Z] New connection from ::1
+[2025-04-02T13:24:29.525Z] Received message: {"type":"client-connect","clientType":"react"}...
+[2025-04-02T13:24:29.525Z] React client connected
+[2025-04-02T13:24:33.196Z] Received message: {"type":"figma-to-react","components":[{"id":"22:173","name":"Button outlined","type":"INSTANCE","x":-220,"y":408,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:173;18:117"...
+[2025-04-02T13:24:33.197Z] Forwarding component data from Figma to React
+[2025-04-02T13:24:38.697Z] Received message: {"type":"figma-to-react","components":[{"id":"22:164","name":"Button primary","type":"INSTANCE","x":-220,"y":303,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:164;18:117",...
+[2025-04-02T13:24:38.698Z] Forwarding component data from Figma to React
+[2025-04-02T13:24:43.433Z] Received message: {"type":"figma-to-react","components":[{"id":"22:197","name":"Button secondary","type":"INSTANCE","x":-220,"y":356,"width":100,"height":32,"visible":true,"rotation":0,"children":[{"id":"I22:197;18:117...
+[2025-04-02T13:24:43.433Z] Forwarding component data from Figma to React

@@ -1,0 +1,78 @@
+.ds-button {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ds-button:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* Variants */
+.ds-button-primary {
+  background-color: #18a0fb;
+  color: white;
+}
+
+.ds-button-primary:hover:not(:disabled) {
+  background-color: #0d8de3;
+}
+
+.ds-button-secondary {
+  background-color: #e9ecef;
+  color: #212529;
+}
+
+.ds-button-secondary:hover:not(:disabled) {
+  background-color: #dee2e6;
+}
+
+.ds-button-outline {
+  background-color: transparent;
+  color: #18a0fb;
+  border: 1px solid #18a0fb;
+}
+
+.ds-button-outline:hover:not(:disabled) {
+  background-color: rgba(24, 160, 251, 0.1);
+}
+
+.ds-button-text {
+  background-color: transparent;
+  color: #18a0fb;
+}
+
+.ds-button-text:hover:not(:disabled) {
+  background-color: rgba(24, 160, 251, 0.1);
+}
+
+/* Sizes */
+.ds-button-small {
+  height: 32px;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+.ds-button-medium {
+  height: 40px;
+  padding: 0 16px;
+  font-size: 16px;
+}
+
+.ds-button-large {
+  height: 48px;
+  padding: 0 20px;
+  font-size: 18px;
+}
+
+/* Full width */
+.ds-button-full-width {
+  width: 100%;
+} 

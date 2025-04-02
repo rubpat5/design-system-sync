@@ -1,0 +1,16 @@
+{
+  "name": "design-system-sync-server",
+  "version": "1.0.0",
+  "description": "WebSocket server for Design System Sync",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "dependencies": {
+    "ws": "^8.13.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+} 

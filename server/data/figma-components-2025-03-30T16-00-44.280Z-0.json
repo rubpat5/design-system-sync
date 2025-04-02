@@ -1,0 +1,105 @@
+{
+  "id": "2:13",
+  "name": "test group",
+  "type": "GROUP",
+  "x": -263,
+  "y": -263,
+  "width": 398,
+  "height": 270,
+  "visible": true,
+  "rotation": 0,
+  "children": [
+    {
+      "id": "1:2",
+      "name": "Rectangle 1",
+      "type": "RECTANGLE",
+      "x": -263,
+      "y": -263,
+      "width": 398,
+      "height": 270,
+      "visible": true,
+      "rotation": 0,
+      "children": [],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.8509804010391235,
+            "g": 0.8509804010391235,
+            "b": 0.8509804010391235
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "cornerRadius": 64,
+      "a11y": {
+        "issues": []
+      }
+    },
+    {
+      "id": "2:5",
+      "name": "example text",
+      "type": "TEXT",
+      "x": -171,
+      "y": -175,
+      "width": 73,
+      "height": 15,
+      "visible": true,
+      "rotation": 0,
+      "children": [],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 0.9729429483413696,
+            "g": 0.36786505579948425,
+            "b": 0.36786505579948425
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "characters": "example text",
+      "fontSize": 12,
+      "fontName": {
+        "family": "Inter",
+        "style": "Regular"
+      },
+      "textAlignHorizontal": "LEFT",
+      "textAlignVertical": "TOP",
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "a11y": {
+        "issues": [
+          {
+            "type": "contrast",
+            "level": "AA",
+            "message": "Text contrast ratio is below 4.5:1 (WCAG AA for normal text)"
+          },
+          {
+            "type": "contrast",
+            "level": "AAA",
+            "message": "Text contrast ratio is below 7:1 (WCAG AAA for normal text)"
+          }
+        ]
+      }
+    }
+  ],
+  "a11y": {
+    "issues": []
+  }
+}

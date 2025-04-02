@@ -1,0 +1,13 @@
+{
+  "name": "Design System Sync",
+  "id": "design-system-sync",
+  "api": "1.0.0",
+  "main": "code.js",
+  "ui": "ui.html",
+  "editorType": ["figma"],
+  "permissions": ["currentuser", "activeusers"],
+  "networkAccess": {
+    "allowedDomains": ["*"],
+    "reasoning": "The plugin needs to communicate with the React app server to synchronize components"
+  }
+} 

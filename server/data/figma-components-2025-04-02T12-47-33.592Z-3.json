@@ -1,0 +1,224 @@
+{
+  "id": "22:197",
+  "name": "Button primary",
+  "type": "INSTANCE",
+  "x": -220,
+  "y": 356,
+  "width": 100,
+  "height": 32,
+  "visible": true,
+  "rotation": 0,
+  "children": [
+    {
+      "id": "I22:197;18:117",
+      "name": "Content",
+      "type": "FRAME",
+      "x": 16,
+      "y": 8,
+      "width": 59,
+      "height": 16,
+      "visible": true,
+      "rotation": 0,
+      "children": [
+        {
+          "id": "I22:197;18:116",
+          "name": "BUTTON",
+          "type": "TEXT",
+          "x": 0,
+          "y": 0,
+          "width": 59,
+          "height": 16,
+          "visible": true,
+          "rotation": 0,
+          "children": [],
+          "fills": [
+            {
+              "type": "SOLID",
+              "visible": true,
+              "opacity": 1,
+              "blendMode": "NORMAL",
+              "color": {
+                "r": 1,
+                "g": 0.9803921580314636,
+                "b": 0.9803921580314636
+              },
+              "boundVariables": {}
+            }
+          ],
+          "backgroundColor": {
+            "r": 1,
+            "g": 0.9803921580314636,
+            "b": 0.9803921580314636,
+            "a": 1
+          },
+          "strokes": [],
+          "strokeWeight": 1,
+          "characters": "BUTTON",
+          "fontSize": 14,
+          "fontName": {
+            "family": "Inter",
+            "style": "Bold"
+          },
+          "textAlignHorizontal": "LEFT",
+          "textAlignVertical": "TOP",
+          "letterSpacing": {
+            "unit": "PERCENT",
+            "value": 0
+          },
+          "lineHeight": {
+            "unit": "PIXELS",
+            "value": 16
+          },
+          "a11y": {
+            "issues": [
+              {
+                "type": "contrast",
+                "level": "AA",
+                "message": "Text contrast ratio is below 3:1 (WCAG AA for large text)"
+              },
+              {
+                "type": "contrast",
+                "level": "AAA",
+                "message": "Text contrast ratio is below 4.5:1 (WCAG AAA for large text)"
+              },
+              {
+                "type": "size",
+                "message": "Interactive elements should be at least 44x44px for touch targets"
+              }
+            ]
+          }
+        },
+        {
+          "id": "I22:197;18:113",
+          "name": "Icon / small",
+          "type": "INSTANCE",
+          "x": 67,
+          "y": 0,
+          "width": 16,
+          "height": 16,
+          "visible": false,
+          "rotation": 0,
+          "children": [
+            {
+              "id": "I22:197;18:113;18:110",
+              "name": "Icon",
+              "type": "FRAME",
+              "x": 0,
+              "y": 0,
+              "width": 16,
+              "height": 16,
+              "visible": true,
+              "rotation": 0,
+              "children": [
+                {
+                  "id": "I22:197;18:113;18:111",
+                  "name": "Vector",
+                  "type": "VECTOR",
+                  "x": 1,
+                  "y": 1,
+                  "width": 14,
+                  "height": 14,
+                  "visible": true,
+                  "rotation": 0,
+                  "children": [],
+                  "fills": [
+                    {
+                      "type": "SOLID",
+                      "visible": true,
+                      "opacity": 1,
+                      "blendMode": "NORMAL",
+                      "color": {
+                        "r": 1,
+                        "g": 0.9803921580314636,
+                        "b": 0.9803921580314636
+                      },
+                      "boundVariables": {}
+                    }
+                  ],
+                  "backgroundColor": {
+                    "r": 1,
+                    "g": 0.9803921580314636,
+                    "b": 0.9803921580314636,
+                    "a": 1
+                  },
+                  "strokes": [],
+                  "strokeWeight": 1,
+                  "a11y": {
+                    "issues": []
+                  }
+                }
+              ],
+              "strokes": [],
+              "strokeWeight": 1,
+              "a11y": {
+                "issues": []
+              }
+            }
+          ],
+          "strokes": [],
+          "strokeWeight": 1,
+          "componentProperties": {},
+          "a11y": {
+            "issues": []
+          }
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "a11y": {
+        "issues": []
+      }
+    }
+  ],
+  "fills": [
+    {
+      "type": "SOLID",
+      "visible": true,
+      "opacity": 1,
+      "blendMode": "NORMAL",
+      "color": {
+        "r": 1,
+        "g": 0.6928919553756714,
+        "b": 0.12254832684993744
+      },
+      "boundVariables": {}
+    }
+  ],
+  "backgroundColor": {
+    "r": 1,
+    "g": 0.6928919553756714,
+    "b": 0.12254832684993744,
+    "a": 1
+  },
+  "strokes": [
+    {
+      "type": "SOLID",
+      "visible": true,
+      "opacity": 1,
+      "blendMode": "NORMAL",
+      "color": {
+        "r": 1,
+        "g": 0.6928919553756714,
+        "b": 0.12254832684993744
+      },
+      "boundVariables": {}
+    }
+  ],
+  "borderColor": {
+    "r": 1,
+    "g": 0.6928919553756714,
+    "b": 0.12254832684993744,
+    "a": 1
+  },
+  "strokeWeight": 2,
+  "cornerRadius": 8,
+  "componentProperties": {},
+  "a11y": {
+    "issues": [
+      {
+        "type": "size",
+        "message": "Interactive elements should be at least 44x44px for touch targets"
+      }
+    ]
+  }
+}

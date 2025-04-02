@@ -1,0 +1,57 @@
+{
+  "id": "2:5",
+  "name": "example text",
+  "type": "TEXT",
+  "x": -196.19598388671875,
+  "y": -209.22222900390625,
+  "width": 53.007537841796875,
+  "height": 18.33333396911621,
+  "visible": true,
+  "rotation": 0,
+  "children": [],
+  "fills": [
+    {
+      "type": "SOLID",
+      "visible": true,
+      "opacity": 1,
+      "blendMode": "NORMAL",
+      "color": {
+        "r": 0.9729429483413696,
+        "g": 0.36786505579948425,
+        "b": 0.36786505579948425
+      },
+      "boundVariables": {}
+    }
+  ],
+  "strokes": [],
+  "strokeWeight": 1,
+  "characters": "example text",
+  "fontSize": 12,
+  "fontName": {
+    "family": "Inter",
+    "style": "Regular"
+  },
+  "textAlignHorizontal": "LEFT",
+  "textAlignVertical": "TOP",
+  "letterSpacing": {
+    "unit": "PERCENT",
+    "value": 0
+  },
+  "lineHeight": {
+    "unit": "AUTO"
+  },
+  "a11y": {
+    "issues": [
+      {
+        "type": "contrast",
+        "level": "AA",
+        "message": "Text contrast ratio is below 4.5:1 (WCAG AA for normal text)"
+      },
+      {
+        "type": "contrast",
+        "level": "AAA",
+        "message": "Text contrast ratio is below 7:1 (WCAG AAA for normal text)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Design System Sync</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      margin: 0;
+      padding: 20px;
+    }
+    h2 {
+      margin-top: 0;
+      font-size: 16px;
+      font-weight: 600;
+    }
+    button {
+      background-color: #18A0FB;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 8px 16px;
+      margin-top: 8px;
+      cursor: pointer;
+      font-weight: 500;
+      display: block;
+      width: 100%;
+    }
+    button:disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+    input, select {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 8px;
+      border: 1px solid #E5E5E5;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+    .form-group {
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      display: block;
+      margin-bottom: 4px;
+      font-weight: 500;
+      font-size: 12px;
+    }
+    .connection-status {
+      display: flex;
+      align-items: center;
+      margin-bottom: 16px;
+      font-size: 12px;
+    }
+    .status-indicator {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+    .status-connected {
+      background-color: #4CAF50;
+    }
+    .status-disconnected {
+      background-color: #F44336;
+    }
+    .component-list {
+      margin-top: 16px;
+      border: 1px solid #E5E5E5;
+      border-radius: 4px;
+      max-height: 150px;
+      overflow-y: auto;
+    }
+    .component-item {
+      padding: 8px;
+      border-bottom: 1px solid #E5E5E5;
+      font-size: 12px;
+    }
+    .component-item:last-child {
+      border-bottom: none;
+    }
+    .logs {
+      margin-top: 16px;
+      padding: 8px;
+      background-color: #F5F5F5;
+      border-radius: 4px;
+      font-size: 12px;
+      font-family: monospace;
+      max-height: 100px;
+      overflow-y: auto;
+      white-space: pre-wrap;
+    }
+    .a11y-issues {
+      margin-top: 16px;
+    }
+    .a11y-issue {
+      padding: 8px;
+      margin-bottom: 8px;
+      border-radius: 4px;
+      font-size: 12px;
+      background-color: #FFF3CD;
+      border-left: 4px solid #FFC107;
+    }
+    .a11y-issue.error {
+      background-color: #F8D7DA;
+      border-left-color: #DC3545;
+    }
+    .tabs {
+      display: flex;
+      margin-bottom: 16px;
+      border-bottom: 1px solid #E5E5E5;
+    }
+    .tab {
+      padding: 8px 16px;
+      cursor: pointer;
+      font-size: 14px;
+    }
+    .tab.active {
+      border-bottom: 2px solid #18A0FB;
+      font-weight: 500;
+    }
+    .tab-content {
+      display: none;
+    }
+    .tab-content.active {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+  <h2>Design System Sync</h2>
+  
+  <div class="connection-status">
+    <div id="status-indicator" class="status-indicator status-disconnected"></div>
+    <span id="status-text">Disconnected</span>
+  </div>
+  
+  <div class="tabs">
+    <div class="tab active" data-tab="sync">Sync</div>
+    <div class="tab" data-tab="a11y">Accessibility</div>
+    <div class="tab" data-tab="settings">Settings</div>
+  </div>
+  
+  <div id="sync-tab" class="tab-content active">
+    <div class="form-group">
+      <label for="server-url">Server URL</label>
+      <input type="text" id="server-url" value="ws://localhost:3031">
+    </div>
+    
+    <button id="connect-button">Connect to Server</button>
+    <button id="export-button" disabled>Export Selected Components</button>
+    <button id="test-message-button">Send Test Message</button>
+    
+    <h2>Selected Components</h2>
+    <div id="component-list" class="component-list"></div>
+  </div>
+  
+  <div id="a11y-tab" class="tab-content">
+    <h2>Accessibility Issues</h2>
+    <div id="a11y-issues" class="a11y-issues">
+      <div class="a11y-issue">Select components to see accessibility issues</div>
+    </div>
+  </div>
+  
+  <div id="settings-tab" class="tab-content">
+    <div class="form-group">
+      <label for="export-format">Export Format</label>
+      <select id="export-format" class="input">
+        <option value="tailwind">Tailwind CSS</option>
+        <option value="emotion">Emotion</option>
+        <option value="styled">Styled Components</option>
+      </select>
+    </div>
+    
+    <div class="form-group">
+      <label for="a11y-level">Accessibility Level</label>
+      <select id="a11y-level" class="input">
+        <option value="AA">WCAG AA</option>
+        <option value="AAA">WCAG AAA</option>
+      </select>
+    </div>
+  </div>
+  
+  <h2>Logs</h2>
+  <div id="logs" class="logs"></div>
+
+  <script>
+    const connectBtn = document.getElementById('connect-button');
+    const exportBtn = document.getElementById('export-button');
+    const serverUrl = document.getElementById('server-url');
+    const statusIndicator = document.getElementById('status-indicator');
+    const statusText = document.getElementById('status-text');
+    const compList = document.getElementById('component-list');
+    const logContainer = document.getElementById('logs');
+    const a11yIssues = document.getElementById('a11y-issues');
+    const tabElems = document.querySelectorAll('.tab');
+    const tabContents = document.querySelectorAll('.tab-content');
+    
+    let ws = null;
+    let defaultUrl = 'ws://localhost:3031';
+    
+    function addLog(msg) {
+      const timestamp = new Date().toLocaleTimeString();
+      logContainer.textContent = `[${timestamp}] ${msg}\n` + logContainer.textContent;
+    }
+    
+    for(let tab of tabElems) {
+      tab.addEventListener('click', function() {
+        tabElems.forEach(t => t.classList.remove('active'));
+        tabContents.forEach(c => c.classList.remove('active'));
+        
+        this.classList.add('active');
+        const tabId = this.getAttribute('data-tab');
+        document.getElementById(`${tabId}-tab`).classList.add('active');
+      });
+    }
+    
+    connectBtn.addEventListener('click', function() {
+      const url = serverUrl.value.trim();
+      
+      if (url) {
+        parent.postMessage({ 
+          pluginMessage: { 
+            type: 'connect-server',
+            serverUrl: url
+          } 
+        }, '*');
+        
+        connectToServer(url);
+      }
+    });
+    
+    function connectToServer(url) {
+      defaultUrl = url;
+      
+      try {
+        if (ws) {
+          ws.close();
+        }
+        
+        addLog('Connecting to server...');
+        
+        ws = new WebSocket(url);
+        
+        ws.onopen = function() {
+          addLog('Connected to server');
+          
+          statusIndicator.classList.remove('status-disconnected');
+          statusIndicator.classList.add('status-connected');
+          statusText.textContent = 'Connected';
+          exportBtn.disabled = false;
+          
+          parent.postMessage({ 
+            pluginMessage: { 
+              type: 'connection-status', 
+              connected: true 
+            } 
+          }, '*');
+          
+          ws.send(JSON.stringify({
+            type: 'client-connect',
+            clientType: 'figma'
+          }));
+        };
+        
+        ws.onclose = function() {
+          addLog('Disconnected from server');
+          
+          statusIndicator.classList.remove('status-connected');
+          statusIndicator.classList.add('status-disconnected');
+          statusText.textContent = 'Disconnected';
+          exportBtn.disabled = true;
+          
+          parent.postMessage({ 
+            pluginMessage: { 
+              type: 'connection-status', 
+              connected: false 
+            } 
+          }, '*');
+          
+          ws = null;
+        };
+        
+        ws.onerror = function(error) {
+          addLog('WebSocket error: ' + (error.message || 'Unknown error'));
+          
+          statusIndicator.classList.remove('status-connected');
+          statusIndicator.classList.add('status-disconnected');
+          statusText.textContent = 'Error';
+          exportBtn.disabled = true;
+        };
+        
+        ws.onmessage = function(event) {
+          try {
+            const msg = JSON.parse(event.data);
+            addLog('Received from server: ' + JSON.stringify(msg).substring(0, 100) + '...');
+            
+            if (msg.type === 'test-message-response') {
+              addLog('Received response to test message: ' + msg.message);
+            }
+            else if (msg.type === 'react-to-figma') {
+              addLog('Received component update from React');
+              
+              parent.postMessage({ 
+                pluginMessage: { 
+                  type: 'update-component',
+                  component: msg.component
+                } 
+              }, '*');
+            }
+          } catch (err) {
+            addLog('Error parsing message: ' + err.message);
+          }
+        };
+      } catch (err) {
+        addLog('Failed to connect: ' + err.message);
+        
+        statusIndicator.classList.remove('status-connected');
+        statusIndicator.classList.add('status-disconnected');
+        statusText.textContent = 'Error';
+        exportBtn.disabled = true;
+      }
+    }
+    
+    exportBtn.addEventListener('click', function() {
+      if (!ws || ws.readyState !== WebSocket.OPEN) {
+        addLog('Not connected to server. Please connect first.');
+        return;
+      }
+      
+      addLog('WebSocket state: ' + ws.readyState + ' (1 = OPEN)');
+      
+      parent.postMessage({ 
+        pluginMessage: { 
+          type: 'export-components'
+        } 
+      }, '*');
+      
+      addLog('Requesting component data from plugin...');
+    });
+    
+    document.getElementById('test-message-button').addEventListener('click', function() {
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        const testMsg = {
+          type: 'test-message',
+          message: 'Hello from Figma plugin!',
+          timestamp: new Date().toISOString()
+        };
+        
+        ws.send(JSON.stringify(testMsg));
+        addLog('Sent test message');
+      } else {
+        addLog('Not connected to server. Please connect first.');
+      }
+    });
+    
+    window.onmessage = function(event) {
+      const msg = event.data.pluginMessage;
+      
+      if (!msg) return;
+      
+      if (msg.type === 'selection-update') {
+        updateComponentList(msg);
+        
+        a11yIssues.innerHTML = '';
+        if (msg.count === 0) {
+          a11yIssues.innerHTML = '<div class="a11y-issue">Select components to see accessibility issues</div>';
+        }
+      }
+      else if (msg.type === 'export-components') {
+        addLog('Received component data from plugin');
+        
+        const comps = Array.isArray(msg.components) ? msg.components : 
+                      (msg.components ? [msg.components] : []);
+        
+        if (comps.length === 0) {
+          addLog('No components received from plugin');
+          return;
+        }
+        
+        updateA11yIssues(comps);
+        
+        handleExportData(comps);
+      }
+      else if (msg.type === 'component-updated') {
+        addLog('Component updated in Figma: ' + msg.componentId);
+      }
+      else {
+        addLog('Received message from plugin: ' + JSON.stringify(msg).substring(0, 100) + '...');
+      }
+    };
+    
+    function updateComponentList(data) {
+      compList.innerHTML = '';
+      
+      if (data.count === 0) {
+        const emptyItem = document.createElement('div');
+        emptyItem.className = 'component-item';
+        emptyItem.textContent = 'No components selected';
+        compList.appendChild(emptyItem);
+      } else {
+        addLog(`Selected ${data.count} item(s)`);
+        
+        data.items.forEach(item => {
+          const componentItem = document.createElement('div');
+          componentItem.className = 'component-item';
+          componentItem.textContent = `${item.name} (${item.type})`;
+          compList.appendChild(componentItem);
+        });
+      }
+    }
+    
+    function updateA11yIssues(components) {
+      a11yIssues.innerHTML = '';
+      
+      let issueCount = 0;
+      
+      components.forEach(comp => {
+        if (comp.a11y && comp.a11y.issues && comp.a11y.issues.length > 0) {
+          comp.a11y.issues.forEach(issue => {
+            const issueEl = document.createElement('div');
+            issueEl.className = 'a11y-issue';
+            
+            if (issue.level === 'AAA') {
+              issueEl.textContent = `${comp.name}: ${issue.message} (AAA)`;
+            } else if (issue.level === 'AA') {
+              issueEl.className += ' error';
+              issueEl.textContent = `${comp.name}: ${issue.message} (AA)`;
+            } else {
+              issueEl.className += ' error';
+              issueEl.textContent = `${comp.name}: ${issue.message}`;
+            }
+            
+            a11yIssues.appendChild(issueEl);
+            issueCount++;
+          });
+        }
+        
+        if (comp.children && comp.children.length > 0) {
+          checkChildrenForIssues(comp.children, comp.name);
+        }
+      });
+      
+      if (issueCount === 0) {
+        const noIssues = document.createElement('div');
+        noIssues.className = 'a11y-issue';
+        noIssues.style.backgroundColor = '#D4EDDA';
+        noIssues.style.borderLeftColor = '#28A745';
+        noIssues.textContent = 'No accessibility issues found';
+        a11yIssues.appendChild(noIssues);
+      }
+    }
+    
+    function checkChildrenForIssues(children, parentName) {
+      children.forEach(child => {
+        if (child.a11y && child.a11y.issues && child.a11y.issues.length > 0) {
+          child.a11y.issues.forEach(issue => {
+            const issueEl = document.createElement('div');
+            issueEl.className = 'a11y-issue';
+            
+            if (issue.level === 'AAA') {
+              issueEl.textContent = `${parentName} > ${child.name}: ${issue.message} (AAA)`;
+            } else if (issue.level === 'AA') {
+              issueEl.className += ' error';
+              issueEl.textContent = `${parentName} > ${child.name}: ${issue.message} (AA)`;
+            } else {
+              issueEl.className += ' error';
+              issueEl.textContent = `${parentName} > ${child.name}: ${issue.message}`;
+            }
+            
+            a11yIssues.appendChild(issueEl);
+          });
+        }
+        
+        if (child.children && child.children.length > 0) {
+          checkChildrenForIssues(child.children, `${parentName} > ${child.name}`);
+        }
+      });
+    }
+    
+    function handleExportData(components) {
+      if (!components || components.length === 0) {
+        addLog('No components to export');
+        return;
+      }
+      
+      addLog(`Received ${components.length} component(s) for export`);
+      addLog('Component data sample: ' + JSON.stringify(components[0]).substring(0, 100) + '...');
+      
+      if (ws && ws.readyState === WebSocket.OPEN) {
+        const data = {
+          type: 'figma-to-react',
+          components: components,
+          timestamp: new Date().toISOString()
+        };
+        
+        try {
+          addLog('Attempting to send data over WebSocket...');
+          ws.send(JSON.stringify(data));
+          addLog('Sent components to server successfully');
+        } catch (err) {
+          addLog('Error sending components: ' + err.message);
+        }
+      } else {
+        addLog('WebSocket connection lost or not open. Current state: ' + 
+            (ws ? ws.readyState : 'null'));
+        
+        statusIndicator.classList.remove('status-connected');
+        statusIndicator.classList.add('status-disconnected');
+        statusText.textContent = 'Disconnected';
+        exportBtn.disabled = true;
+      }
+    }
+    
+    addLog('Plugin UI loaded');
+  </script>
+</body>
+</html> 

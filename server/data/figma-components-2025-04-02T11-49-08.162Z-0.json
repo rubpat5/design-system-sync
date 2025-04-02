@@ -1,0 +1,97 @@
+{
+  "id": "18:69",
+  "name": "Property 1=hover",
+  "type": "COMPONENT",
+  "x": 10,
+  "y": 53,
+  "width": 60,
+  "height": 33,
+  "visible": true,
+  "rotation": 0,
+  "children": [
+    {
+      "id": "18:70",
+      "name": "Button",
+      "type": "TEXT",
+      "x": 8,
+      "y": 8,
+      "width": 44,
+      "height": 17,
+      "visible": true,
+      "rotation": 0,
+      "children": [],
+      "fills": [
+        {
+          "type": "SOLID",
+          "visible": true,
+          "opacity": 1,
+          "blendMode": "NORMAL",
+          "color": {
+            "r": 1,
+            "g": 1,
+            "b": 1
+          },
+          "boundVariables": {}
+        }
+      ],
+      "strokes": [],
+      "strokeWeight": 1,
+      "characters": "Button",
+      "fontSize": 14,
+      "fontName": {
+        "family": "Inter",
+        "style": "Regular"
+      },
+      "textAlignHorizontal": "CENTER",
+      "textAlignVertical": "CENTER",
+      "letterSpacing": {
+        "unit": "PERCENT",
+        "value": 0
+      },
+      "lineHeight": {
+        "unit": "AUTO"
+      },
+      "a11y": {
+        "issues": [
+          {
+            "type": "contrast",
+            "level": "AA",
+            "message": "Text contrast ratio is below 4.5:1 (WCAG AA for normal text)"
+          },
+          {
+            "type": "contrast",
+            "level": "AAA",
+            "message": "Text contrast ratio is below 7:1 (WCAG AAA for normal text)"
+          },
+          {
+            "type": "size",
+            "message": "Interactive elements should be at least 44x44px for touch targets"
+          }
+        ]
+      }
+    }
+  ],
+  "fills": [
+    {
+      "type": "SOLID",
+      "visible": true,
+      "opacity": 1,
+      "blendMode": "NORMAL",
+      "color": {
+        "r": 0.37254902720451355,
+        "g": 0.45098039507865906,
+        "b": 0.8627451062202454
+      },
+      "boundVariables": {}
+    }
+  ],
+  "strokes": [],
+  "strokeWeight": 1,
+  "cornerRadius": 4,
+  "variantProperties": {
+    "Property 1": "hover"
+  },
+  "a11y": {
+    "issues": []
+  }
+}

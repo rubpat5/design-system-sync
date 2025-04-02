@@ -1,0 +1,32 @@
+{
+  "id": "1:2",
+  "name": "Rectangle 1",
+  "type": "RECTANGLE",
+  "x": -263,
+  "y": -263,
+  "width": 289,
+  "height": 165,
+  "visible": true,
+  "rotation": 0,
+  "children": [],
+  "fills": [
+    {
+      "type": "SOLID",
+      "visible": true,
+      "opacity": 1,
+      "blendMode": "NORMAL",
+      "color": {
+        "r": 0.8509804010391235,
+        "g": 0.8509804010391235,
+        "b": 0.8509804010391235
+      },
+      "boundVariables": {}
+    }
+  ],
+  "strokes": [],
+  "strokeWeight": 1,
+  "cornerRadius": 64,
+  "a11y": {
+    "issues": []
+  }
+}
